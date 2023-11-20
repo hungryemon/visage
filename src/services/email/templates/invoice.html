@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"
+    style="line-height: 1.5em;-webkit-text-size-adjust: 100%;color: #777777;font-family: 'Inter', sans-serif;font-size: 14px;font-weight: 400;overflow-x: hidden;background-color: #f5f7ff;">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ThemeMarch">
+    <!-- Site Title -->
+    <title>General Invoice</title>
+
+</head>
+
+<body
+    style="margin: 0;color: #777777;font-family: 'Inter', sans-serif;font-size: 14px;font-weight: 400;line-height: 1.5em;overflow-x: hidden;background-color: #f5f7ff;">
+    <div class="cs-container"
+        style="margin-top: 0;line-height: 1.5em;max-width: 880px;padding: 30px 15px;margin-left: auto;margin-right: auto;">
+        <div class="cs-invoice cs-style1"
+            style="margin-top: 0;line-height: 1.5em;background: #fff;border-radius: 10px;padding: 50px;">
+            <div class="cs-logo cs-mb5" style="width: 96px;margin-top: 0;line-height: 1.5em;margin-bottom: 24px;">
+                <a href="https://quranshikkha.app" target="_blank"
+                    style="background-color: transparent;color: inherit;text-decoration: none;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;">
+                    <img src="https://algosoft.s3.ap-south-1.amazonaws.com/qsa/public/qsa-logo.png"
+                  alt="Quran Shikkha Logo"
+                  style="border-style: none;border: 0;max-width: 100%;height: auto;vertical-align: middle;"></a>
+            </div>
+            <div class="cs-invoice_in" id="download_section" style="margin-top: 0;line-height: 1.5em;">
+                <div class="cs-invoice_head cs-type1 cs-mb25"
+                    style="margin-top: 0;line-height: 1.5em;margin-bottom: 25px;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;padding-bottom: 25px;border-bottom: 1px solid #eaeaea;">
+                    <div class="cs-invoice_left" style="margin-top: 0;line-height: 1.5em;max-width: 55%;">
+                        <p class="cs-invoice_number cs-primary_color cs-mb5 cs-f16"
+                            style="margin-top: 0;line-height: 1.5em;margin-bottom: 5px;font-size: 16px;color: #111111;">
+                            <b
+                class="cs-primary_color" style="font-weight: bold;color: #111111;">Order No:</b>
+                            {{order_no}}</p>
+                        <p class="cs-invoice_date cs-primary_color cs-m0"
+                            style="margin-top: 0;line-height: 1.5em;margin-bottom: 15px;margin: 0px;color: #111111;"><b
+                class="cs-primary_color" style="font-weight: bold;color: #111111;">Date: </b>{{order_date}}</p>
+                        <p class="cs-invoice_date cs-primary_color cs-m0"
+                            style="margin-top: 0;line-height: 1.5em;margin-bottom: 15px;margin: 0px;color: #111111;"><b
+                class="cs-primary_color" style="font-weight: bold;color: #111111;">Status: </b>{{order_status}}
+                        </p>
+                    </div>
+                </div>
+                <div class="cs-invoice_head cs-mb10"
+                    style="margin-top: 0;line-height: 1.5em;margin-bottom: 10px;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;">
+                    <div class="cs-invoice_left" style="margin-top: 0;line-height: 1.5em;max-width: 55%;">
+                        <b class="cs-primary_color" style="font-weight: bold;color: #111111;">Invoice To:</b>
+                        <p style="margin-top: 0;line-height: 1.5em;margin-bottom: 15px;">
+                            {{customer.name}} <br>
+                            <a href="mailto:{{customer.email}}"
+                                style="background-color: transparent;color: inherit;text-decoration: none;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;">{{customer.email}}</a>
+                            <br>
+                            <a href="tel:{{customer.phone}}"
+                                style="background-color: transparent;color: inherit;text-decoration: none;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;">{{customer.phone}}</a>
+                        </p>
+                    </div>
+                    <div class="cs-invoice_right cs-text_right"
+                        style="margin-top: 0;line-height: 1.5em;text-align: left; margin-left: 32px;">
+                        <b class="cs-primary_color" style="font-weight: bold;color: #111111;">Pay To:</b>
+                        <p style="margin-top: 0;line-height: 1.5em;margin-bottom: 15px;">
+                            Quran Shikkha <br>
+              Gazipur, Bangladesh <br>
+                            <a href="mailto:contactus@quranshikkha.app"
+                                style="background-color: transparent;color: inherit;text-decoration: none;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;">contactus@quranshikkha.app</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="cs-table cs-style1" style="margin-top: 0;line-height: 1.5em;">
+                    <div class="cs-round_border"
+                        style="margin-top: 0;line-height: 1.5em;border: 1px solid #eaeaea;overflow: hidden;border-radius: 6px;">
+                        <div class="cs-table_responsive" style="margin-top: 0;line-height: 1.5em;overflow-x: auto;">
+                            <table style="width: 100%;caption-side: bottom;border-collapse: collapse;min-width: 600px;">
+                                <thead>
+                                    <tr>
+                                        <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg"
+                                            style="text-align: left;padding: 10px 15px;line-height: 1.55em;font-weight: 600;width: 25%;color: #111111;background: #f6f6f6;">
+                                            Item</th>
+                                        <th class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg"
+                                            style="text-align: left;padding: 10px 15px;line-height: 1.55em;font-weight: 600;width: 25%;color: #111111;background: #f6f6f6;">
+                                            Code</th>
+                                        <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg"
+                                            style="text-align: left;padding: 10px 15px;line-height: 1.55em;font-weight: 600;width: 8.33333333%;color: #111111;background: #f6f6f6;">
+                                            Qty</th>
+                                        <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg"
+                                            style="text-align: left;padding: 10px 15px;line-height: 1.55em;font-weight: 600;width: 8.33333333%;color: #111111;background: #f6f6f6;">
+                                            Price</th>
+                                        <th class="cs-width_1 cs-semi_bold cs-primary_color cs-focus_bg cs-text_right"
+                                            style="text-align: right;padding: 10px 15px;line-height: 1.55em;font-weight: 600;width: 8.33333333%;color: #111111;background: #f6f6f6;">
+                                            Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each items}}
+                                    <tr>
+                                        <td class="cs-width_3"
+                                            style="border-top: 1px solid #eaeaea;padding: 10px 15px;line-height: 1.55em;width: 25%;">
+                                            {{title}}
+                                        </td>
+                                        <td class="cs-width_3"
+                                            style="border-top: 1px solid #eaeaea;padding: 10px 15px;line-height: 1.55em;width: 25%;">
+                                            {{code}}
+                                        </td>
+                                        <td class="cs-width_1"
+                                            style="border-top: 1px solid #eaeaea;padding: 10px 15px;line-height: 1.55em;width: 8.33333333%;">
+                                            {{quantity}}</td>
+                                        <td class="cs-width_1"
+                                            style="border-top: 1px solid #eaeaea;padding: 10px 15px;line-height: 1.55em;width: 8.33333333%;">
+                                            ৳
+                                            {{unit_price}}</td>
+                                        <td class="cs-width_1 cs-text_right"
+                                            style="border-top: 1px solid #eaeaea;padding: 10px 15px;line-height: 1.55em;width: 8.33333333%;text-align: right;">
+                                            ৳ {{total_price}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cs-invoice_footer cs-border_top"
+                            style="margin-top: 0;line-height: 1.5em;border-top: 1px solid #eaeaea;display: flex;">
+                            <div class="cs-left_footer cs-mobile_hide"
+                                style="margin-top: 0;line-height: 1.5em;width: 55%;padding: 10px 15px;">
+                                <p class="cs-mb0" style="margin-top: 0;line-height: 1.5em;margin-bottom: 0px;"><b
+                    class="cs-primary_color" style="font-weight: bold;color: #111111;">Additional Information:</b></p>
+                                <p class="cs-m0"
+                                    style="margin-top: 0;line-height: 1.5em;margin-bottom: 15px;margin: 0px;">
+                                    {{additional_info}}</p>
+                            </div>
+                            <!-- <div class="cs-right_footer">
+                <table>
+                  <tbody>
+                    <tr class="cs-border_left">
+                      <td class="cs-width_3 cs-semi_bold cs-primary_color cs-focus_bg">Subtotal</td>
+                      <td class="cs-width_3 cs-semi_bold cs-focus_bg cs-primary_color cs-text_right">$1140</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> -->
+                        </div>
+                    </div>
+                    <div class="cs-invoice_footer" style="margin-top: 0;line-height: 1.5em;display: flex;">
+                        <div class="cs-left_footer cs-mobile_hide"
+                            style="margin-top: 0;line-height: 1.5em;width: 55%;padding: 10px 15px;"></div>
+                        <div class="cs-right_footer" style="margin-top: 0;line-height: 1.5em;width: 46%;">
+                            <table style="width: 100%;caption-side: bottom;border-collapse: collapse;margin-top: -1px;">
+                                <tbody>
+                                    <tr class="cs-border_none" style="border: none;">
+                                        <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color"
+                                            style="border-top: 0;padding: 10px 15px;line-height: 1.55em;font-size: 16px;font-weight: 700;width: 25%;color: #111111;">
+                                            Total Amount</td>
+                                        <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right"
+                                            style="border-top: 0;padding: 10px 15px;line-height: 1.55em;font-size: 16px;font-weight: 700;width: 25%;color: #111111;text-align: right;">
+                                            ৳ {{payment.total_payable}}</td>
+                                    </tr>
+                                    <tr class="cs-border_none" style="border: none;">
+                                        <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color"
+                                            style="border-top: 0;padding: 0px 15px;font-size: 14px;font-weight: 700;width: 25%;color: #000000;">
+                                            Payment Status</td>
+                                        <td class="cs-width_3 cs-border_top_0 cs-bold cs-f16 cs-primary_color cs-text_right"
+                                            style="border-top: 0;padding: 0px 15px;font-size: 14px;font-weight: 700;width: 25%;color: #111111;text-align: right;">
+                                            {{payment.payment_status}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-note"
+                    style="margin-top: 40px;line-height: 1.5em;display: flex;-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;">
+                    <div class="cs-note_left"
+                        style="margin-top: 6px;line-height: 1.5em;margin-right: 10px;margin-left: -5px;display: flex;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewbox="0 0 512 512"
+                            style="width: 32px;">
+                            <path
+                                d="M416 221.25V416a48 48 0 01-48 48H144a48 48 0 01-48-48V96a48 48 0 0148-48h98.75a32 32 0 0122.62 9.37l141.26 141.26a32 32 0 019.37 22.62z"
+                                fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path>
+                            <path d="M256 56v120a32 32 0 0032 32h120M176 288h160M176 368h160" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="cs-note_right" style="margin-top: 0;line-height: 1.5em;">
+                        <p class="cs-mb0" style="margin-top: 0;line-height: 1.5em;margin-bottom: 0px;"><b
+                class="cs-primary_color cs-bold" style="font-weight: 700;color: #111111;">Note:</b></p>
+                        <p class="cs-m0" style="margin-top: 0;line-height: 1.5em;margin-bottom: 15px;margin: 0px;">
+                            {{note}}</p>
+                    </div>
+                </div><!-- .cs-note -->
+            </div>
+            <div class="cs-invoice_btns cs-hide_print"
+                style="margin-top: 30px;line-height: 1.5em;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;">
+
+                <a href="https://quranshikkha.app" target="_blank" class="cs-invoice_btn cs-color2"
+                    style="background-color: transparent;color: #fff;text-decoration: none;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;display: inline-flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;border: none;font-weight: 600;padding: 8px 20px;cursor: pointer;background: #8bc53f;border-radius: 5px;">
+                    <span>Visit Website</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://algosoft.s3.ap-south-1.amazonaws.com/qsa/public/email-template/invoice/js/jquery.min.js">
+  </script>
+  <script src="https://algosoft.s3.ap-south-1.amazonaws.com/qsa/public/email-template/invoice/js/jspdf.min.js">
+  </script>
+  <script src="https://algosoft.s3.ap-south-1.amazonaws.com/qsa/public/email-template/invoice/js/html2canvas.min.js">
+  </script>
+  <script src="https://algosoft.s3.ap-south-1.amazonaws.com/qsa/public/email-template/invoice/js/main.js"></script> -->
+</body>
+
+</html>
